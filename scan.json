@@ -1,0 +1,9 @@
+{
+  "repositories": [
+    {
+      "fullName": "cameroncheung-mend/log_test",
+      "branchName": "main",
+      "uploadScannerLogs": true
+    }
+  ]
+}
