@@ -1,7 +1,7 @@
 {
   "scanSettings": {
-    "configMode": "LOCAL",
-    "configExternalURL": "",
+    "configMode": "EXTERNAL",
+    "configExternalURL": "https://github.com/cameroncheung-mend/whitesource-config/raw/main/whitesource.config",
     "baseBranches": []
   },
   "scanSettingsSAST": {
