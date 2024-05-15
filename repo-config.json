@@ -25,9 +25,16 @@
     "minSeverityLevel": "LOW",
     "issueType": "DEPENDENCY"
   },
-  "remediateSettings": {
-    "workflowRules": {
-      "enabled": true
+    "remediateSettings": {
+        "workflowRules": {
+            "enabled": false
+        },
+        "enableRenovate": true,
+        "extends": [
+            "config:recommended",
+            "mergeConfidence:all-badges",
+            "local>whitesource-config/whitesource-config:smart-merge"
+        ]
     }
   }
 }
