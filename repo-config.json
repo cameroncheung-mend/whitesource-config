@@ -33,7 +33,7 @@
         "extends": [
             "config:recommended",
             "mergeConfidence:all-badges",
-            "local>whitesource-config/whitesource-config:smart-merge"
+            "local>cameroncheung-mend/whitesource-config:smart-merge"
         ]
     }
 }
