@@ -10,7 +10,8 @@
                     "very high",
                     "high"
                 ],
-                "commitMessagePrefix": "[HIGH-MINOR] "
+                "commitMessagePrefix": "[HIGH-MINOR] ",
+                "separateMajorMinor": false
             },
             {
                 "groupName": "Mend: high confidence and major dependency updates",
@@ -21,7 +22,8 @@
                     "very high",
                     "high"
                 ],
-                "commitMessagePrefix": "[HIGH-MAJOR] "
+                "commitMessagePrefix": "[HIGH-MAJOR] ",
+                "separateMajorMinor": false
             },
             {
                 "groupName": "Mend: Low confidence dependency updates",
@@ -33,7 +35,8 @@
                     "patch",
                     "major"
                 ],
-                "commitMessagePrefix": "[LOW] "
+                "commitMessagePrefix": "[LOW] ",
+                "separateMajorMinor": false
             },
             {
                 "groupName": "Mend: Medium confidence dependency updates",
@@ -45,7 +48,8 @@
                     "patch",
                     "major"
                 ],
-                "commitMessagePrefix": "[MEDIUM] "
+                "commitMessagePrefix": "[MEDIUM] ",
+                "separateMajorMinor": false
             }
         ]
 }
