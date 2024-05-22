@@ -25,16 +25,48 @@
     "minSeverityLevel": "LOW",
     "issueType": "DEPENDENCY"
   },
-    "remediateSettings": {
-        "workflowRules": {
-            "enabled": false
-        },
-        "enableRenovate": true,
-        "extends": [
-            "config:recommended",
-            "mergeConfidence:all-badges",
-            "local>cameroncheung-mend/whitesource-config:smart-merge"
+  "remediateSettings": {
+     "workflowRules": {
+      "enabled": false
+    },
+    "enableRenovate" : true,  
+        "extends": [ 
+    ":semanticPrefixFixDepsChoreOthers",
+    ":ignoreModulesAndTests",
+    "replacements:all",
+    "workarounds:all",
+    "mergeConfidence:all-badges"   
+    ],
+   "packageRules": [
+            {
+                "groupName": "Mend: high confidence minor and patch dependency updates",
+                "matchUpdateTypes": [ "minor","patch" ],
+                "matchConfidence": ["very high","high" ],
+                "commitMessagePrefix": "[HIGH-MINOR] ",
+                "separateMajorMinor": false
+            },
+            {
+                "groupName": "Mend: high confidence and major dependency updates",
+                "matchUpdateTypes": ["major" ],
+                "matchConfidence": ["very high", "high"],
+                "commitMessagePrefix": "[HIGH-MAJOR] ",
+                "separateMajorMinor": false
+            },
+            {
+                "groupName": "Mend: Low confidence dependency updates",
+                "matchConfidence": ["low" ],
+                "matchUpdateTypes": ["minor","patch", "major" ],
+                "commitMessagePrefix": "[LOW] ",
+                "separateMajorMinor": false
+            },
+            {
+                "groupName": "Mend: Medium confidence dependency updates",
+                "matchConfidence": [ "neutral"],
+                "matchUpdateTypes": ["minor","patch", "major"],
+                "commitMessagePrefix": "[MEDIUM] ",
+                "separateMajorMinor": false
+            }
         ]
-    }
+  }
 }
  
