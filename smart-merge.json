@@ -1,28 +1,51 @@
 { 
-   "packageRules": [
-      {
-      	"matchUpdateTypes": ["minor", "patch"],
-      	"matchConfidence": ["very high", "high"],
-         "commitMessagePrefix": "[HIGH-MINOR] ",
-         "groupName": "Mend: high confidence minor and patch dependency updates"
-      },
-      {
-         "matchUpdateTypes": ["major"],
-      	"matchConfidence": ["very high", "high"],
-         "commitMessagePrefix": "[HIGH-MAJOR] ",
-         "groupName": "Mend: high confidence and major dependency updates"
-      },
-      {
-         "matchUpdateTypes": ["minor", "patch", "major"],
-      	"matchConfidence": ["low"],
-         "commitMessagePrefix": "[LOW] ",
-         "groupName": "Mend: Low confidence dependency updates"
-      },
-      {
-         "matchUpdateTypes": ["minor", "patch", "major"],
-      	"matchConfidence": ["neutral"],
-         "commitMessagePrefix": "[MEDIUM] ",
-         "groupName": "Mend: Medium confidence dependency updates"
-      }
-   ]
+        "packageRules": [
+            {
+                "groupName": "Mend: high confidence minor and patch dependency updates",
+                "matchUpdateTypes": [
+                    "minor",
+                    "patch"
+                ],
+                "matchConfidence": [
+                    "very high",
+                    "high"
+                ],
+                "commitMessagePrefix": "[HIGH-MINOR] "
+            },
+            {
+                "groupName": "Mend: high confidence and major dependency updates",
+                "matchUpdateTypes": [
+                    "major"
+                ],
+                "matchConfidence": [
+                    "very high",
+                    "high"
+                ],
+                "commitMessagePrefix": "[HIGH-MAJOR] "
+            },
+            {
+                "groupName": "Mend: Low confidence dependency updates",
+                "matchConfidence": [
+                    "low"
+                ],
+                "matchUpdateTypes": [
+                    "minor",
+                    "patch",
+                    "major"
+                ],
+                "commitMessagePrefix": "[LOW] "
+            },
+            {
+                "groupName": "Mend: Medium confidence dependency updates",
+                "matchConfidence": [
+                    "neutral"
+                ],
+                "matchUpdateTypes": [
+                    "minor",
+                    "patch",
+                    "major"
+                ],
+                "commitMessagePrefix": "[MEDIUM] "
+            }
+        ]
 }
