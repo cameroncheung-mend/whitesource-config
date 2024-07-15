@@ -20,7 +20,7 @@
     "extends": [
       "config:recommended",
       "mergeConfidence:all-badges",
-      "local>whitesource-config/whitesource-config:smart-merge"
+      "github>whitesource-config/whitesource-config:smart-merge"
     ]
   }
 }
