@@ -10,9 +10,6 @@
         "enableScan": true,
         "scanPullRequests": true,
         "incrementalScan": true,
-        "baseBranches": [
-            "master"
-        ],
         "snippetSize": 10
     },
     "checkRunSettings": {
