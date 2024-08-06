@@ -1,26 +1,49 @@
 {
-  "scanSettings": {
-    "configMode": "AUTO",
-    "configExternalURL": "",
-    "baseBranches": []
-  },
-  "buildSettings": {
-    "failBuilds": true,
-    "displayMode": "diff",
-    "useMendBuildNames": true
-  },
-  "issueSettings": {
-    "minSeverityLevel": "LOW"
-  },
-  "remediateSettings": {
-    "workflowRules": {
-      "enabled": false
+    "scanSettings": {
+        "configMode": "AUTO",
+        "configExternalURL": "",
+        "baseBranches": [
+            "master"
+        ]
     },
-    "enableRenovate": true,
-    "extends": [
-      "config:recommended",
-      "mergeConfidence:all-badges",
-      "github>cameroncheung-mend/whitesource-config:smart-merge"
-    ]
-  }
+    "scanSettingsSAST": {
+        "enableScan": true,
+        "scanPullRequests": true,
+        "incrementalScan": true,
+        "baseBranches": [
+            "master"
+        ],
+        "snippetSize": 10
+    },
+    "checkRunSettings": {
+        "vulnerableCheckRunConclusionLevel": "failure",
+        "displayMode": "diff",
+        "useMendCheckNames": true,
+        "failOnVulnerabilityMinSeverity": "High"
+    },
+    "checkRunSettingsSAST": {
+        "checkRunConclusionLevel": "failure",
+        "severityThreshold": "high"
+    },
+    "issueSettings": {
+        "minSeverityLevel": "HIGH",
+        "issueType": "DEPENDENCY"
+    },
+    "issueSettingsSAST": {
+        "minSeverityLevel": "high",
+        "issueType": "repo"
+    },
+    "remediateSettings": {
+        "workflowRules": {
+            "enabled": true
+        }
+    },
+    "imageSettings": {
+        "imageTracing": {
+            "enableImageTracingPR": false,
+            "addRepositoryCoordinate": false,
+            "addDockerfilePath": false,
+            "addMendIdentifier": false
+        }
+    }
 }
